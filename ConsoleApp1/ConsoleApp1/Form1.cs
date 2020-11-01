@@ -19,7 +19,9 @@ namespace ConsoleApp1
             InitializeComponent();
 
             for (double i = 0; i <= 10; i += 0.1)
+            {
                 chart1.Series[0].Points.AddXY(i, Program.TheFunc(name, i));
+            }
             double c = Program.TheFunc(name, 0);
             double a = (Program.TheFunc(name, 1) + Program.TheFunc(name, -1)) / 2 - c;
             double b = (Program.TheFunc(name, 1) - Program.TheFunc(name, -1)) / 2;
